@@ -26,4 +26,5 @@ jobs:
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_USER_RECEIVER: ${{ secrets.EMAIL_USER_RECEIVER }}
         run: python email_server.py
