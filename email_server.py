@@ -59,7 +59,7 @@ def main():
     EMAIL_PASS = os.getenv("EMAIL_PASS")
     EMAIL_USER_RECEIVER = os.getenv("EMAIL_USER_RECEIVER")
     if not EMAIL_USER or not EMAIL_PASS:
-        raise RuntimeError("Faltam as variáveis EMAIL_USER e/ou EMAIL_PASS.")
+        raise RuntimeError("Missing EMAIL_USER and/or EMAIL_PASS env vars!")
 
     with open("products.json", "r", encoding="utf-8") as f:
         products = json.load(f)
@@ -74,7 +74,7 @@ def main():
         recipient=EMAIL_USER_RECEIVER,
         password=EMAIL_PASS
     )
-    print("Email enviado com sucesso.")
+    print("Email sent successfully!")
 
 if __name__ == "__main__":
     main()
